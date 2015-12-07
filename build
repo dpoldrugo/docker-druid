@@ -1,1 +1,1 @@
-docker build -t druid .
+docker build -t druid_r .
