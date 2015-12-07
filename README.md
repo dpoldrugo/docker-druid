@@ -1,6 +1,6 @@
 docker-druid
 ============
-Docker container running Coordinator, Historical, Realtime, Broker, Overlord, R/RStudio-Server, RDruid, MySql, Zookeeper, and Kafka.
+Docker container running Coordinator, Historical, Realtime, Broker, Overlord, MySql, Zookeeper, and Kafka.
 
 Requirements:Docker
 
@@ -17,7 +17,6 @@ Run Container
 ```
 
 Note port 8083 forwards the Druid Rest API,
-     port 8087 forwards the RStudio-Server
 
 Inside the container, start the entire cluster
 ```bash
