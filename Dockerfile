@@ -75,4 +75,6 @@ RUN mysqld_safe & mysqladmin --wait=5 ping && \
     mysql < mysql.ddl && \
     mysqladmin shutdown
 
+#Additional files
+ADD files/ /
 
