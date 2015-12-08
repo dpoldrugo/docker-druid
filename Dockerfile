@@ -77,6 +77,3 @@ RUN mysqld_safe & mysqladmin --wait=5 ping && \
 
 #Additional files
 ADD files/ /
-
-# Start the entire cluster
-RUN runsvdir-start
