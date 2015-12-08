@@ -16,6 +16,14 @@ Run Container
 ./shell
 ```
 
+OR
+
+Start Docker Containter Druid cluster non-interactive
+=====================================================
+```bash
+./start-docker-druid-cluster
+```
+
 Note port 8083 forwards the Druid Rest API,
 
 Inside the container, start the entire cluster
