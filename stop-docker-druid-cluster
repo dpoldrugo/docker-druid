@@ -1,0 +1,1 @@
+docker stop `docker ps | grep druid_r | awk -F" druid_r" '{ print $1 }'`
