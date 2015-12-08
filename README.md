@@ -29,6 +29,6 @@ Start Docker Containter Druid cluster non-interactive
 ./start-docker-druid-cluster
 ```
 
-Note port 8083 forwards the Druid Rest API,
+Note port 8083 forwards the Druid Rest API
 
 You may now follow the tutorial here http://druid.io/docs/0.6.105/Tutorial:-Loading-Your-Data-Part-1.html
