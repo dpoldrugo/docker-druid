@@ -77,4 +77,4 @@ RUN mysqld_safe & mysqladmin --wait=5 ping && \
 #Additional files
 ADD files/ /
 
-CMD /usr/sbin/runsvdir-start
+CMD runsvdir-start
