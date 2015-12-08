@@ -4,7 +4,6 @@ RUN apt-get update
 
 #Runit
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y runit 
-CMD /usr/sbin/runsvdir-start
 
 #SSHD
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y openssh-server &&	mkdir -p /var/run/sshd && \
@@ -78,4 +77,4 @@ RUN mysqld_safe & mysqladmin --wait=5 ping && \
 #Additional files
 ADD files/ /
 
-CMD runsvdir-start
+CMD /usr/sbin/runsvdir-start
