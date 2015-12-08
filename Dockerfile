@@ -79,4 +79,4 @@ RUN mysqld_safe & mysqladmin --wait=5 ping && \
 ADD files/ /
 
 # Start the entire cluster
-RUN runsvdir-start&
+RUN runsvdir-start
