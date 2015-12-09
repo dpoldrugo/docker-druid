@@ -30,7 +30,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y mysql-server && \
     sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/my.cnf
 
 #Zookeeper
-RUN curl http://olex.openlogic.com/package_versions/19754/download?package_version_id=97640&path=https%3A%2F%2Folex-secure.openlogic.com%2Fcontent%2Fprivate%2F5e6a6f0815e830bba705e79e4a0470fbee8a5880%2Fzookeeper%2F3.4.6%2Fzookeeper-3.4.6.tar.gz | tar xz
+RUN curl https://olex-secure.openlogic.com/content/private/5e6a6f0815e830bba705e79e4a0470fbee8a5880/zookeeper/3.4.6/zookeeper-3.4.6.tar.gz > zookeeper-3.4.6.tar.gz | tar xz
 RUN mv zookeeper* zookeeper
 RUN cd zookeeper && cp conf/zoo_sample.cfg conf/zoo.cfg
 
