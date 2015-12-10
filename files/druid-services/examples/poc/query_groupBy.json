@@ -1,14 +1,9 @@
 {
   "queryType": "groupBy",
   "dataSource": "poc",
-  "granularity": "minute",
+  "granularity": "all",
   "dimensions": ["campaignId"],
-  "filter": {
-    "type": "and",
-    "fields": [
-      { "type": "selector", "dimension": "campaignId", "value": "1" }
-    ]
-  },
+  "filter": { "type": "selector", "dimension": "campaignId", "value": 3 },
   "aggregations": [
     { "type": "longSum", "name": "totalCount_sum", "fieldName": "totalCount" },
     { "type": "doubleSum", "name": "totalPrice_sum", "fieldName": "price" }
@@ -18,11 +13,11 @@
       "name": "price_avg",
       "fn": "/",
       "fields": [
-        { "type": "fieldAccess", "name": "totalPrice_sum", "fieldName": "totalCount_sum" },
-        { "type": "fieldAccess", "name": "totalCount_sum", "fieldName": "totalPrice_sum" }
+         { "type": "fieldAccess", "name": "totalCount_sum", "fieldName": "totalPrice_sum" },
+         { "type": "fieldAccess", "name": "totalPrice_sum", "fieldName": "totalCount_sum" }
       ]
     }
   ],
   "intervals": [ "2012-01-01T00:00:00.000/2020-01-01T00:00:00.000" ],
-  "having": { "type": "greaterThan", "aggregation": "totalCount_sum", "value": 0  }
+  "having": { "type": "greaterThan", "aggregation": "price_avg", "value": 0  }
 }
