@@ -4,3 +4,4 @@
 {"timestamp": "2015-12-10T12:00:15Z", "campaignId": 1, "countDelta": 0, "priceDelta": 31}
 {"timestamp": "2015-12-10T12:00:16Z", "campaignId": 2, "countDelta": 0, "priceDelta": 31}
 {"timestamp": "2015-12-10T12:00:17Z", "campaignId": 3, "countDelta": -1, "priceDelta": -69}
+{"timestamp": "2015-12-10T12:00:17Z", "campaignId": 3, "countDelta": 1, "priceDelta": 1000}
