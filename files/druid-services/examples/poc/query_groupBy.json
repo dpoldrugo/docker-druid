@@ -1,0 +1,35 @@
+{
+  "queryType": "groupBy",
+  "dataSource": "poc",
+  "granularity": "day",
+  "dimensions": ["campaignId"],
+  "limitSpec": { "type": "default", "limit": 5000, "columns": ["dim1", "metric1"] },
+  "filter": {
+    "type": "and",
+    "fields": [
+      { "type": "selector", "dimension": "campaignId", "value": "1" },
+      { "type_commented": "or", 
+        "fields": [
+          { "type": "selector", "dimension": "sample_dimension2", "value": "sample_value2" },
+          { "type": "selector", "dimension": "sample_dimension3", "value": "sample_value3" }
+        ]
+      }
+    ]
+  },
+  "aggregations": [
+    { "type": "longSum", "name": "totalCount_sum", "fieldName": "totalCount" },
+    { "type": "doubleSum", "name": "totalPrice_sum", "fieldName": "price" }
+  ],
+  "postAggregations": [
+    { "type": "arithmetic",
+      "name": "price_avg",
+      "fn": "/",
+      "fields": [
+        { "type": "fieldAccess", "name": "totalPrice_sum", "fieldName": "totalCount" },
+        { "type": "fieldAccess", "name": "totalCount_sum", "fieldName": "price" }
+      ]
+    }
+  ],
+  "intervals": [ "2012-01-01T00:00:00.000/2020-01-01T00:00:00.000" ],
+  "having": { "type": "greaterThan", "aggregation": "totalCount_sum", "value": 0  }
+}
