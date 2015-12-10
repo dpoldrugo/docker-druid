@@ -7,8 +7,8 @@
   "filter": {
     "type": "and",
     "fields": [
-      { "type": "selector", "dimension": "campaignId", "value": "1" },
-      { "type_commented": "or", 
+      { "type": "selector", "dimension": "campaignId", "value": "1" }
+      { "type_commented_add_comma_upper": "or", 
         "fields": [
           { "type": "selector", "dimension": "sample_dimension2", "value": "sample_value2" },
           { "type": "selector", "dimension": "sample_dimension3", "value": "sample_value3" }
