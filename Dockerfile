@@ -32,7 +32,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y mysql-server && \
 #Zookeeper
 RUN curl https://olex-secure.openlogic.com/content/private/5e6a6f0815e830bba705e79e4a0470fbee8a5880/zookeeper/3.4.6/zookeeper-3.4.6.tar.gz > zookeeper-3.4.6.tar.gz
 RUN tar -xzf zookeeper-3.4.6.tar.gz
-RUN mv zookeeper* zookeeper
+RUN mkdir zookeeper
+RUN mv zookeeper-3.4.6/* zookeeper/
 RUN cd zookeeper && cp conf/zoo_sample.cfg conf/zoo.cfg
 
 #Kafka
