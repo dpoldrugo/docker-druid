@@ -2,7 +2,8 @@
     "queryType": "timeseries", 
     "dataSource": "poc", 
     "intervals": [ "2010-01-01/2020-01-01" ], 
-    "granularity": "all", 
+    "granularity": "all",
+    "filter": { "type": "selector", "dimension": "campaignId", "value": 1 },
     "aggregations": [
         {"type": "longSum", "fieldName": "totalCount", "name": "totalCount_sum"}, 
         {"type": "doubleSum", "fieldName": "price", "name": "totalPrice_sum"}
