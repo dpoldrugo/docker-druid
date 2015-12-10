@@ -1,6 +1,6 @@
-{"timestamp": "2015-12-10T12:00:00Z, "campaignId": 1, "countDelta": 1, "priceDelta": 69.1}
-{"timestamp": "2015-12-10T12:00:01Z, "campaignId": 2, "countDelta": 2, "priceDelta": 169.1}
-{"timestamp": "2015-12-10T12:00:02Z, "campaignId": 3, "countDelta": 3, "priceDelta": 269.1}
-{"timestamp": "2015-12-10T12:00:15Z, "campaignId": 1, "countDelta": 0, "priceDelta": 31}
-{"timestamp": "2015-12-10T12:00:16Z, "campaignId": 2, "countDelta": 0, "priceDelta": 31}
-{"timestamp": "2015-12-10T12:00:17Z, "campaignId": 3, "countDelta": -1, "priceDelta": -69}
+{"timestamp": "2015-12-10T12:00:00Z", "campaignId": 1, "countDelta": 1, "priceDelta": 69.1}
+{"timestamp": "2015-12-10T12:00:01Z", "campaignId": 2, "countDelta": 2, "priceDelta": 169.1}
+{"timestamp": "2015-12-10T12:00:02Z", "campaignId": 3, "countDelta": 3, "priceDelta": 269.1}
+{"timestamp": "2015-12-10T12:00:15Z", "campaignId": 1, "countDelta": 0, "priceDelta": 31}
+{"timestamp": "2015-12-10T12:00:16Z", "campaignId": 2, "countDelta": 0, "priceDelta": 31}
+{"timestamp": "2015-12-10T12:00:17Z", "campaignId": 3, "countDelta": -1, "priceDelta": -69}
